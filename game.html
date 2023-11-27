@@ -1,25 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Home</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+        function rollDice() {
+            var userRoll = Math.floor(Math.random() * 6) + 1;
+            var computerRoll = Math.floor(Math.random() * 6) + 1;
 
+            var diceResult = "You rolled:  " + userRoll + " " +  "Computer rolled: "+ " " + computerRoll;
 
+            if (userRoll > computerRoll) {
+                diceResult += " You win!";
+            } else if (userRoll < computerRoll) {
+                diceResult += " Computer wins!";
+            } else {
+                diceResult += " It's a tie!";
+            }
 
+            alert(diceResult);
+        }
 
-        <ul>
-            <li ><a href="index.html">Home</a></li>
-            <li><a href="form.html">Form</a></li>
-            <li class="active"><a href="game.html">Game</a></li>
-        </ul>
+        function playGame(answer) {
+            var playArea = document.getElementById("playArea");
 
+            if (answer === 'yes') {
+                playArea.innerHTML = "<button onclick='rollDice()'>Roll the Dice</button>";
+            } else if (answer === 'no') {
+                playArea.innerHTML = "<p>Maybe next time! Feel free to play whenever you're ready.</p>";
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- NavBar -->
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="form.html">Form</a></li>
+        <li class="active"><a href="game.html">Game</a></li>
+    </ul>
 
+    <h1>Game</h1>
 
+    <h4>Would you like to play the game?</h4>
+    <button onclick="playGame('yes')">Yes</button>
+    <button onclick="playGame('no')">No</button>
 
-
-        <h1>My First Heading</h1>
-    </body>
+    <!-- Play area where the GUI for rolling the dice will be displayed -->
+    <div id="playArea"></div>
+</body>
 </html>
