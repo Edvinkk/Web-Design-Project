@@ -32,20 +32,33 @@
             displayScore();
             alert(diceResult);
         }
-
+        // This function will be called when the user clicks the "Yes" or "No" button
         function displayScore() {
             var scoreArea = document.getElementById("scoreArea");
             scoreArea.innerHTML = "<p>Score: " + score[0] + " - " + score[1] + "</p>";
         }
 
+        // This function will be called when the user clicks the "Yes" or "No" button
         function playGame(answer) {
+            // Get the play area element    
             var playArea = document.getElementById("playArea");
-            
+            // If the user wants to play, it displays the button to roll the dice
             if (answer === 'yes') {
                 playArea.innerHTML = "<button onclick='rollDice()'>Roll the Dice</button>";
             } else if (answer === 'no') {
+                // If the user doesn't want to play, it displays the message below
                 playArea.innerHTML = "<p>Maybe next time! Feel free to play whenever you're ready.</p>";
             }
+        }
+
+
+        function resetScore() {
+            // Reset the scores
+            score[0] = 0;
+            score[1] = 0;
+        
+            // Display the reset scores on the page
+            displayScore();
         }
     </script>
 </head>
@@ -57,7 +70,7 @@
         <li class="active"><a href="game.html">Game</a></li>
     </ul>
 
-    <h1>Game</h1>
+    <h1 class="center">Dice Game</h1>
     <div class="center">
         <h4>Would you like to play the game?</h4>
         <button onclick="playGame('yes')">Yes</button>
@@ -66,6 +79,7 @@
         <!-- Play area where the GUI for rolling the dice will be displayed -->
         <div id="playArea"></div>
         <div id="scoreArea"></div>
+        <button  onclick="resetScore()">Reset Score</button>
     </div>
 </body>
 </html>
