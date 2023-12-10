@@ -1,4 +1,6 @@
-/* Edvin Krasovski*/
+/* Edvin Krasovski */
+
+/* Reset default margin, padding, and box-sizing for the entire page */
 body {
     margin: 0;
     padding: 0;
@@ -6,75 +8,81 @@ body {
     font-family: consolas;
 }
 
-
-
-
-
 /* Navbar Reference: https://www.w3schools.com/css/css_navbar_horizontal.asp  */
 
+/* Style the navigation bar */
 ul {
-    list-style-type: none;
+    list-style-type: none; /* Remove default list styling */
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    background-color: #000000;
-    width: 100%;
+    overflow: hidden; /* Ensure content doesn't overflow */
+    background-color: #000000; /* Set background color */
+    width: 100%; /* Take up the full width of the container */
 }
 
+/* Style the navigation bar items */
 li {
-    float: left;
+    float: left; /* Float list items to the left for horizontal alignment */
 }
 
+/* Style the navigation bar links */
 li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+    display: block; /* Make the links block-level for full width */
+    color: white; /* Set text color */
+    text-align: center; /* Center-align text within the links */
+    padding: 14px 16px; /* Set padding for the links */
+    text-decoration: none; /* Remove default underline */
 }
 
+/* Style the navigation bar links on hover */
 li a:hover {
-    background-color: #3a3c42;
+    background-color: #3a3c42; /* Change background color on hover */
 }
 
+/* Style the active navigation bar link */
 .active {
-    background-color: #04AA6D;
+    background-color: #04AA6D; /* Set background color for the active link */
 }
 
-
-
-/*   game      */
+/* Style for game buttons */
 button {
-    background-color: #000000;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
+    background-color: #000000; /* Set background color for buttons */
+    color: white; /* Set text color for buttons */
+    padding: 14px 20px; /* Set padding for buttons */
+    margin: 8px 0; /* Set margin for buttons */
+    border: none; /* Remove button border */
+    cursor: pointer; /* Set cursor to pointer on hover */
 }
 
 /* Responsive styles */
+
+/* Media query for screens with a maximum width of 600px */
 @media only screen and (max-width: 600px) {
-li {
-        float: none;
-        width: 100%;
+    /* Adjust navigation bar for smaller screens */
+    li {
+        float: none; /* Reset float for list items */
+        width: 100%; /* Set full width for list items */
+    }
+
+    /* Adjust navigation bar links for smaller screens */
+    li a {
+        display: block; /* Make links block-level for full width */
+        text-align: center; /* Center-align text within links */
+        width: 100%; /* Set full width for links */
+        box-sizing: border-box; /* Include padding and border in the width */
+    }
+
+    /* Style the active navigation bar link for smaller screens */
+    .active {
+        background-color: #04AA6D; /* Set background color for active link */
+    }
 }
 
-li a {
-        display: block;
-        text-align: center;
-        width: 100%;
-        box-sizing: border-box;
-}
-
-.active {
-        background-color: #04AA6D;
-}
-}
-
+/* Media query for screens with a maximum width of 768px */
 @media only screen and (max-width: 768px) {
+    /* Adjust the width of buttons for smaller screens */
     button {
-        width: 100%;
+        width: 100%; /* Set full width for buttons */
     }
 }
 

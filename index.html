@@ -1,45 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 	
+	<!-- Meta tags for character set and viewport -->
 	<meta charset="UTF-8">
 	<meta name="viewpoint" content="width=device-wedth, initial-scale=1.0">
+	<!-- page title and linking to external stylesheet -->
 	<title>Zero Hunger Initiative</title>
 	<link rel="stylesheet" href="style.css">
-	
+	<script type="text/javascript">
+		alert("Please help by donating to the cause, as little as 1 euro can help make a difference.");
+	</script>
 </head>
 <body>
+	<!-- navagation menu -->
 	<ul>
-        <li><a href="index.html">Home</a></li>
+        <li class="active"><a href="index.html">Home</a></li>
         <li><a href="form.html">Form</a></li>
-        <li class="active"><a href="game.html">Game</a></li>
+        <li ><a href="game.html">Game</a></li>
     </ul>
+	<!-- Header section -->
 	<header>
 		<div id="header-div">
 		<h1>Zero Hunger Initiative</h1>
-		<p>Working towards a world that has no hunger</p>
+		<p><strong>Working towards a world that has no hunger</strong></p>
 		</div>
 	</header>
+	<!-- main content section -->
 	<section>
+		
 	<div class="banner">
 		<div class="banner__content">
-			<div class="banner__text">
-				<strong>Reminder:</strong> please help by donating to the cause, as little as 1 euro can help make a difference.
-			</div>
-			<button class="banner__close" type="button">
-				<span class="material-icons">
-					close
-				</span>
-			</button>
-				
+			
 	
-	
+		<!-- First content container with mission information -->
 		<div class="container">
 			<div class="content">
 				<h2>Our Mission</h2>
-				<!-- This is a comment -->
-				<!-- Rememeber to add a paragraph -->
+				<!-- mission statement and comment -->
 				<p>By 2030, end hunger and ensure access by all people, in particular the poor and people in vulnerable situations, including infants, to safe, nutritious and sufficient food all year round.</p>
 			
 			</div>
@@ -47,20 +45,50 @@
 				<img src="images/zerohunger.jpg" alt="Mission Image">
 			</div>
 		</div>
+		<!-- Second content container with a call to action -->
 		<div class="container">
 			<div class="image">
 				<h2>Join Us</h2>
 				<p>Help us change the world by abolishing world hunger and this can be done with your help by clicking the button in the top right and help by donating</p>
+				<a href="form.html">
+					<button>Donate now</button>
+				</a>
 			</div>
 			<div class="image">
 				<img src="images/fighting world hunger.jpg" alt="Help us Image">
 			</div>
+		<!-- Third content container with information on tackling world hunger -->
+		<div class="container">
+			<div class="image">
+				<h2>How to tackle world hunger</h2>
+				<p>Hunger not only causes immediate suffering but also undermines economic growth and development in affected areas. To achieve this goal, there needs to be a focus on increasing agricultural productivity, improving access to food, and promoting sustainable food systems.</p>
+			</div>
+			<div class="image">
+				<img src="images/how to solve world hunger.jpg" alt="How to solve world hunger">
+		<!-- Fourth content container with information on what zero hunger is -->
+		<div class="container">
+			<div class="image">
+			<h2>What is zero hunger?</h2>
+			<p>Zero Hunger is one of the United Nations Sustainable Development Goals (SDGs) and is defined as the objective to ensure that everyone has access to sufficient, safe, and nutritious food to meet their dietary needs and preferences, and that all people have the ability to acquire the food they need, without compromising their economic, social, and environmental well-being.</p>
+		</div>
+			<div class="image">
+				<img src="images/what is zero hunger.jpg" alt="what is zero hunger">
+			<!-- Fifth content container with a invite to play the game-->	
+			<div class="container">
+				<div class="image">
+				<h2>Want to play a game?<h2>
+				<a href="game.html">
+					<button>Play the game</button>
+				</a>
+			<div class="image">
+				<img src="images/dicegame.jpg" alt="Play the dicegame">
+				
+				
+				
+				
+				
 		</div>
 	</section>
-	<script>
-		document.querySelector(".banner__close").addEventListener("click", function () {   
-			this.closest(".banner").style.display = "none";
-		});
-	</script>
+	
 </body>
 </html>		

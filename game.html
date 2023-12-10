@@ -73,21 +73,20 @@
 
 
 
-    <!-- Main content -->
 
-    <h1> </h1>
+    <!-- main body-->
+    <div class="banner">
+        <h1 class="center">Dice Game</h1>
+        <div class="center">
+            <h4>Would you like to play the game?</h4>
+            <button onclick="playGame('yes')">Yes</button>
+            <button onclick="playGame('no')">No</button>
 
-
-    <h1 class="center">Dice Game</h1>
-    <div class="center">
-        <h4>Would you like to play the game?</h4>
-        <button onclick="playGame('yes')">Yes</button>
-        <button onclick="playGame('no')">No</button>
-
-        <!-- Play area where the GUI for rolling the dice will be displayed -->
-        <div id="playArea"></div>
-        <div id="scoreArea"></div>
-        <button  onclick="resetScore()">Reset Score</button>
+            <!-- Play area where the GUI for rolling the dice will be displayed -->
+            <div id="playArea"></div>
+            <div id="scoreArea"></div>
+            <button  onclick="resetScore()">Reset Score</button>
+        </div>
     </div>
 </body>
 </html>
